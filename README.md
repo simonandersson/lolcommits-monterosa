@@ -69,7 +69,7 @@ Animated gifs (Mac/OSX only) can take a while to generate (depending on the numb
 
     brew install ffmpeg
 
-Use the `LOLCOMMITS_ANIMATE` environment variable with the number of seconds to capture. [Wacaw](http://webcam-tools.sourceforge.net) is used to capture the video. The `LOLCOMMITS_DEVICE` env variable can be used to change wacaw's `video-device` argument.
+Use the `LOLCOMMITS_ANIMATE` environment variable with the number of seconds to capture. [Wacaw](http://webcam-tools.sourceforge.net) is used to capture the video. The `LOLCOMMITS_DEVICE` env variable can be used to change wacaw's `video-device` argument.  If you find that generating the gif is taking too long, try using the `LOLCOMMITS_FORK` env variable, to fork the capturing process.
 
 <img src="http://cdn2.usa.bugleblogs.com/blogs/000/000/003/de0eb9aa695.gif" />
 
