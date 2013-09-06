@@ -1,7 +1,7 @@
 module Lolcommits
   class GitInfo
     include Methadone::CLILogging
-    attr_accessor :sha, :message, :repo_internal_path, :repo
+    attr_accessor :sha, :date, :message, :repo_internal_path, :repo
 
     def initialize
       debug "GitInfo: attempting to read local repository"
@@ -12,6 +12,7 @@ module Lolcommits
 
       self.message = commit.message.split("\n").first
       self.sha     = commit.sha[0..10]
+      self.date    = commit.date.strftime("%Y-%m-%d %H:%M:%S")
       self.repo_internal_path = g.repo.path
       regex = /.*[:\/](\w*).git/
       match = g.remote.url.match regex if g.remote.url
