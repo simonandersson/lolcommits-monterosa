@@ -38,7 +38,7 @@ module Lolcommits
         c.strokewidth '2'
         c.pointsize '32'
         c.font font_location
-        c.annotate '0', self.runner.sha
+        c.annotate '0', self.runner.date
       end
 
       plugdebug "Writing changed file to #{self.runner.main_image}"
